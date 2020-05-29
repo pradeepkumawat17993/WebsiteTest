@@ -43,6 +43,7 @@ function generateDynamicTable(){
 
 		
 	fetch("temp/New.json").then(function(resp){
+		console.log("Hii pradeep");
 		return resp.json();
 	}).then(function(object){
 		console.log(object);
