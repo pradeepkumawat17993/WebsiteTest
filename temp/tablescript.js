@@ -29,31 +29,30 @@ function readJsonFile(){
 }
 */
 
+function deleteThisFunc(){
 
+	q = new XMLHttpRequest();
+        req.open("GET",'./New.json',true);
+        req.send();
+        req.onload=function(){
+                json=JSON.parse(req.responseText);
+                console.log(json);
+                //document.getElementsByClassName('message')[0].innerHTML=JSON.stringify(json);
+        };
+}
 
 function generateDynamicTable(){
 
-	//var myContacts = []
-	/*
-	fetch("./New.json").then(function(resp){
+	
+	fetch("temp/New.json").then(function(resp){
 		return resp.json();
 	}).then(function(object){
 		console.log(object.str);
 	}).catch(function(error){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
-	});*/
-	/*
-	req = new XMLHttpRequest();
-	req.open("GET",'./New.json',true);
-	req.send();
-	req.onload=function(){
-		json=JSON.parse(req.responseText);
-		console.log(json);
-		//document.getElementsByClassName('message')[0].innerHTML=JSON.stringify(json);          
-	};
-
-	*/
+	});
+	
 
 
 
