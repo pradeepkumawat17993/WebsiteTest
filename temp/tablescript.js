@@ -5,7 +5,7 @@ var myContacts = [
 ];
 
 
-/*
+
 function readJsonFile(){
 	var requestURL = '';
 	var request = new XMLHttpRequest();
@@ -27,7 +27,7 @@ function readJsonFile(){
 		header.appendChild(myPara);
 	}
 }
-*/
+
 
 function deleteThisFunc(){
 
@@ -44,7 +44,7 @@ function deleteThisFunc(){
 function generateDynamicTable(){
 
 	
-	fetch("temp/New.json").then(function(resp){
+	fetch("./temp/New.json").then(function(resp){
 		return resp.json();
 	}).then(function(object){
 		console.log(object.str);
@@ -52,8 +52,6 @@ function generateDynamicTable(){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
 	});
-	
-
 
 
 	var noOfContacts = myContacts.length;
