@@ -41,7 +41,7 @@ function deleteThisFunc(){
 
 function generateDynamicTable(){
 
-	/*	
+		
 	fetch("temp/New.json").then(function(resp){
 		return resp.json();
 	}).then(function(object){
@@ -50,7 +50,7 @@ function generateDynamicTable(){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
 	});
-	*/
+	
 
 	var noOfContacts = myContacts.length;
 
