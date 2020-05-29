@@ -5,48 +5,14 @@ var myContacts = [
 ];
 
 
-/*
-function readJsonFile(){
-	var requestURL = '';
-	var request = new XMLHttpRequest();
-	var request.open('GET', requestURL);
-	request.responseType = 'json';
-	request.send();
-	request.onload = function() {
-		const superHeroes = request.response;
-		populateHeader(superHeroes);
-		showHeroes(superHeroes);
-	}
-	function populateHeader(jsonObj) {
-		const myH1 = document.createElement('h1');
-		myH1.textContent = jsonObj['squadName'];
-		header.appendChild(myH1);
-
-		const myPara = document.createElement('p');
-		myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
-		header.appendChild(myPara);
-	}
-}
-function deleteThisFunc(){
-
-	q = new XMLHttpRequest();
-        req.open("GET",'./New.json',true);
-        req.send();
-        req.onload=function(){
-                json=JSON.parse(req.responseText);
-                console.log(json);
-                //document.getElementsByClassName('message')[0].innerHTML=JSON.stringify(json);
-        };
-}*/
 
 function generateDynamicTable(){
 
 		
 	fetch("temp/New.json").then(function(resp){
-		console.log("Hii pradeep");
 		return resp.json();
 	}).then(function(object){
-		console.log(object);
+		console.log(object.data);
 	}).catch(function(error){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
