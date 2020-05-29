@@ -8,8 +8,18 @@ var myContacts = [
 
 function generateDynamicTable(){
 
+
+	var myInit = {
+		method : 'GET',
+		headers : {
+				'Content-Type': 'application/json'
+				},
+		mode : 'cors',
+		cache : 'default'
+			};
+	let myRequest = new Request("temp/New.json", myInit)
 		
-	fetch("temp/New.json").then(function(resp){
+	fetch(myRequest).then(function(resp){
 		return resp.json();
 	}).then(function(object){
 		console.log(object.data);
