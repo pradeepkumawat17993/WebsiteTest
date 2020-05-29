@@ -5,7 +5,7 @@ var myContacts = [
 ];
 
 
-
+/*
 function readJsonFile(){
 	var requestURL = '';
 	var request = new XMLHttpRequest();
@@ -27,8 +27,6 @@ function readJsonFile(){
 		header.appendChild(myPara);
 	}
 }
-
-
 function deleteThisFunc(){
 
 	q = new XMLHttpRequest();
@@ -39,12 +37,12 @@ function deleteThisFunc(){
                 console.log(json);
                 //document.getElementsByClassName('message')[0].innerHTML=JSON.stringify(json);
         };
-}
+}*/
 
 function generateDynamicTable(){
 
 	
-	fetch("./temp/New.json").then(function(resp){
+	fetch("temp/New.json").then(function(resp){
 		return resp.json();
 	}).then(function(object){
 		console.log(object.str);
