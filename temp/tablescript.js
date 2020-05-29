@@ -43,7 +43,7 @@ function generateDynamicTable(){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
 	});*/
-
+	/*
 	req = new XMLHttpRequest();
 	req.open("GET",'./New.json',true);
 	req.send();
@@ -53,7 +53,7 @@ function generateDynamicTable(){
 		//document.getElementsByClassName('message')[0].innerHTML=JSON.stringify(json);          
 	};
 
-
+	*/
 
 
 
