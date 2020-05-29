@@ -45,7 +45,7 @@ function generateDynamicTable(){
 	fetch("temp/New.json").then(function(resp){
 		return resp.json();
 	}).then(function(object){
-		console.log(object.str);
+		console.log(object);
 	}).catch(function(error){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
