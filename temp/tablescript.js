@@ -1,6 +1,7 @@
 function generateDynamicTable(){
 
-	var myContacts = [
+	var myContacts = []
+	/*var myContacts = [
 		{
 			"name": "Pradeep Kumawat",
 			"email": "pradeepkumawat91@gmail.com",
@@ -17,8 +18,8 @@ function generateDynamicTable(){
 			"mobile":"8081828384"
 		}
 	]
+	*/
 	
-	/*
 	 // Read data from json file in myContacts variable
 	var myInit = {
                 method : 'GET',
@@ -43,7 +44,7 @@ function generateDynamicTable(){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
 	});
-	*/
+	
 	
 	var noOfContacts = myContacts.length;
 
