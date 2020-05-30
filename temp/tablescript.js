@@ -17,7 +17,7 @@ var myContacts = [
         ]
 
 function generateDynamicTable(){
-	/*
+	
 	var myInit = {
 		method : 'GET',
 		headers : {
@@ -28,7 +28,7 @@ function generateDynamicTable(){
 	};
 	let myRequest = new Request("temp/New.json", myInit)
 	
-	var myContacts = [
+	/*var myContacts = [
 		{
 			"name": "Pradeep Kumawat",
 			"email": "pradeepkumawat91@gmail.com",
@@ -45,8 +45,8 @@ function generateDynamicTable(){
 			"mobile":"8081828384"
 		}
 	]
-
-	
+	*/
+	/*
 	fetch(myRequest).then(function(resp){
 		return resp.json();
 	}).then(function(object){
