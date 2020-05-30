@@ -1,8 +1,8 @@
-var myContacts = [
+/*var myContacts = [
 	{ "name": "Parvez Ansari", "email": "ansariparvez@gmai.com", "mobile":"9998979695" },
 	{ "name": "Tayyeb Shaikh", "email": "tshaikh1981@gmai.com", "mobile":"9091929394" },
 	{ "name": "Ashfaque Shaikh", "email": "ashly786@gmai.com", "mobile":"8081828384" }
-];
+];*/
 
 
 
@@ -19,6 +19,8 @@ function generateDynamicTable(){
 	};
 	let myRequest = new Request("temp/New.json", myInit)
 
+	var myContacts = []
+
 	fetch(myRequest).then(function(resp){
 		return resp.json();
 	}).then(function(object){
@@ -31,6 +33,9 @@ function generateDynamicTable(){
 
 
 	var noOfContacts = myContacts.length;
+
+	console.log("length:");
+	console.log(myContacts.length);
 
 	if(noOfContacts>0){
 
