@@ -24,7 +24,7 @@ function generateDynamicTable(){
 	fetch(myRequest).then(function(resp){
 		return resp.json();
 	}).then(function(object){
-		myContacts = object.data;
+		myContacts = JSON.parse(object.data);
 		console.log(object.data);
 	}).catch(function(error){
 		console.error("something went wrong retriving the people!");
