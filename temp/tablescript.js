@@ -1,6 +1,5 @@
 function generateDynamicTable(){
 
-
 	var myInit = {
 		method : 'GET',
 		headers : {
@@ -11,8 +10,25 @@ function generateDynamicTable(){
 	};
 	let myRequest = new Request("temp/New.json", myInit)
 
-	var myContacts = []
+	var myContacts = [
+		{
+			"name": "Pradeep Kumawat",
+			"email": "pradeepkumawat91@gmail.com",
+			"mobile":"7597434356"
+		},
+		{
+			"name": "Tayyeb Shaikh",
+			"email": "tshaikh1981@gmai.com",
+			"mobile":"9091929394"
+		},
+		{
+			"name": "Ashfaque Shaikh",
+			"email": "ashly786@gmai.com",
+			"mobile":"8081828384"
+		}
+	]
 
+	/*
 	fetch(myRequest).then(function(resp){
 		return resp.json();
 	}).then(function(object){
@@ -26,8 +42,8 @@ function generateDynamicTable(){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
 	});
-
-
+	*/
+	
 	var noOfContacts = myContacts.length;
 
 	console.log("length of myContacts is :", myContacts.length);
