@@ -1,15 +1,5 @@
 function generateDynamicTable(){
-	/*
-	var myInit = {
-		method : 'GET',
-		headers : {
-			'Content-Type': 'application/json'
-		},
-		mode : 'cors',
-		cache : 'default'
-	};
-	let myRequest = new Request("temp/New.json", myInit)
-	*/
+
 	var myContacts = [
 		{
 			"name": "Pradeep Kumawat",
@@ -29,6 +19,17 @@ function generateDynamicTable(){
 	]
 	
 	/*
+	 // Read data from json file in myContacts variable
+	var myInit = {
+                method : 'GET',
+                headers : {
+                        'Content-Type': 'application/json'
+                },
+                mode : 'cors',
+                cache : 'default'
+        };
+        let myRequest = new Request("temp/New.json", myInit)
+
 	fetch(myRequest).then(function(resp){
 		return resp.json();
 	}).then(function(object){
