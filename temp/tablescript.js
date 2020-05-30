@@ -12,22 +12,23 @@ function generateDynamicTable(){
 	var myInit = {
 		method : 'GET',
 		headers : {
-				'Content-Type': 'application/json'
-				},
+			'Content-Type': 'application/json'
+		},
 		mode : 'cors',
 		cache : 'default'
-			};
+	};
 	let myRequest = new Request("temp/New.json", myInit)
-		
+
 	fetch(myRequest).then(function(resp){
 		return resp.json();
 	}).then(function(object){
+		myContacts = object.data;
 		console.log(object.data);
 	}).catch(function(error){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
 	});
-	
+
 
 	var noOfContacts = myContacts.length;
 
