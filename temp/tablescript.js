@@ -24,8 +24,12 @@ function generateDynamicTable(){
 	fetch(myRequest).then(function(resp){
 		return resp.json();
 	}).then(function(object){
-		myContacts = JSON.parse(object.data);
-		console.log(object.data);
+
+		object.data.forEach(function(data){
+			myContacts.push({"name":data["name"], "email":data["email"], "mobile": data["mobile"]}); 
+			console.log(data);
+		});
+
 	}).catch(function(error){
 		console.error("something went wrong retriving the people!");
 		console.error(error);
