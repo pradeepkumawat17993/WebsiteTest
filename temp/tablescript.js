@@ -1,51 +1,35 @@
-function generateDynamicTable(){
+var myContacts = []
 
-	var myContacts = []
-	/*var myContacts = [
-		{
-			"name": "Pradeep Kumawat",
-			"email": "pradeepkumawat91@gmail.com",
-			"mobile":"7597434356"
-		},
-		{
-			"name": "Tayyeb Shaikh",
-			"email": "tshaikh1981@gmai.com",
-			"mobile":"9091929394"
-		},
-		{
-			"name": "Ashfaque Shaikh",
-			"email": "ashly786@gmai.com",
-			"mobile":"8081828384"
-		}
-	]
-	*/
-	
-	 // Read data from json file in myContacts variable
+
+async function  onLoadFunction(){
 	var myInit = {
-                method : 'GET',
-                headers : {
-                        'Content-Type': 'application/json'
-                },
-                mode : 'cors',
-                cache : 'default'
-        };
-        let myRequest = new Request("temp/New.json", myInit)
+		method : 'GET',
+		headers : {
+				'Content-Type': 'application/json'
+		},
+		mode : 'cors',
+		cache : 'default'
+	};
+	let myRequest = new Request("temp/New.json", myInit)
 
-	fetch(myRequest).then(function(resp){
-		return resp.json();
+	await fetch(myRequest).then(function(resp){
+	return resp.json();
 	}).then(function(object){
 
-		object.data.forEach(function(data){
-			myContacts.push({"name": JSON.stringify(data["name"]), "email":JSON.stringify(data["email"]), "mobile": JSON.stringify(data["mobile"])}); 
-			console.log(data);
-		});
+	object.data.forEach(function(data){
+		myContacts.push({"name": JSON.stringify(data["name"]), "email":JSON.stringify(data["email"]), "mobile": JSON.stringify(data["mobile"])}); 
+		console.log(data);
+	});
 
 	}).catch(function(error){
-		console.error("something went wrong retriving the people!");
-		console.error(error);
+	console.error("something went wrong retriving the people!");
+	console.error(error);
 	});
-	
-	
+
+	generateDynamicTable()
+}
+
+function generateDynamicTable(){	
 	var noOfContacts = myContacts.length;
 
 	console.log("length of myContacts is :", myContacts.length);
