@@ -1,23 +1,5 @@
-var myContacts = [
-                {
-                        "name": "Pradeep Kumawat",
-                        "email": "pradeepkumawat91@gmail.com",
-                        "mobile":"7597434356"
-                },
-                {
-                        "name": "Tayyeb Shaikh",
-                        "email": "tshaikh1981@gmai.com",
-                        "mobile":"9091929394"
-                },
-                {
-                        "name": "Ashfaque Shaikh",
-                        "email": "ashly786@gmai.com",
-                        "mobile":"8081828384"
-                }
-        ]
-
 function generateDynamicTable(){
-	
+	/*
 	var myInit = {
 		method : 'GET',
 		headers : {
@@ -27,8 +9,8 @@ function generateDynamicTable(){
 		cache : 'default'
 	};
 	let myRequest = new Request("temp/New.json", myInit)
-	
-	/*var myContacts = [
+	*/
+	var myContacts = [
 		{
 			"name": "Pradeep Kumawat",
 			"email": "pradeepkumawat91@gmail.com",
@@ -45,7 +27,7 @@ function generateDynamicTable(){
 			"mobile":"8081828384"
 		}
 	]
-	*/
+	
 	/*
 	fetch(myRequest).then(function(resp){
 		return resp.json();
