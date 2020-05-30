@@ -1,11 +1,3 @@
-/*var myContacts = [
-	{ "name": "Parvez Ansari", "email": "ansariparvez@gmai.com", "mobile":"9998979695" },
-	{ "name": "Tayyeb Shaikh", "email": "tshaikh1981@gmai.com", "mobile":"9091929394" },
-	{ "name": "Ashfaque Shaikh", "email": "ashly786@gmai.com", "mobile":"8081828384" }
-];*/
-
-
-
 function generateDynamicTable(){
 
 
@@ -26,7 +18,7 @@ function generateDynamicTable(){
 	}).then(function(object){
 
 		object.data.forEach(function(data){
-			myContacts.push({"name":data["name"], "email":data["email"], "mobile": data["mobile"]}); 
+			myContacts.push({"name": JSON.stringify(data["name"]), "email":JSON.stringify(data["email"]), "mobile": JSON.stringify(data["mobile"])}); 
 			console.log(data);
 		});
 
@@ -38,8 +30,7 @@ function generateDynamicTable(){
 
 	var noOfContacts = myContacts.length;
 
-	console.log("length:");
-	console.log(myContacts.length);
+	console.log("length of myContacts is :", myContacts.length);
 
 	if(noOfContacts>0){
 
